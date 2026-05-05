@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writing an Online Comment</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0e6ad65.js" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --orange: #ff8a00;
+      --orange-dark: #e36f00;
+      --bg: #fff7ed;
+      --card: #ffffff;
+      --text: #222;
+      --muted: #666;
+      --line: #ffe1bd;
+      --shadow: 0 14px 35px rgba(255, 138, 0, 0.16);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background: linear-gradient(135deg, #fff7ed 0%, #fff 55%, #fff2dd 100%);
+      color: var(--text);
+      padding: 28px;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--orange), #ffb347);
+      color: white;
+      padding: 28px 32px;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      font-weight: 800;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin: 30px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-title span {
+      background: var(--orange);
+      color: white;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1.5px solid var(--line);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.045);
+      position: relative;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 8px;
+      height: 100%;
+      background: var(--orange);
+      border-radius: 24px 0 0 24px;
+    }
+
+    .card h3 {
+      margin: 0 0 14px;
+      color: var(--orange-dark);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .starter {
+      background: #fffaf3;
+      border: 1px solid #ffe4c2;
+      border-radius: 14px;
+      padding: 10px 12px;
+      margin: 8px 0;
+    }
+
+    .easy { border-left: 5px solid #6cc24a; }
+    .middle { border-left: 5px solid #ffb347; }
+
+    .label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 3px;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 850px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <header>
+      <h1>Writing an Online Comment</h1>
+    </header>
+
+    <div class="section-title">
+      <span><i class="fa-solid fa-pen"></i></span>
+      Useful sentence starters
+    </div>
+
+    <section class="cards">
+
+      <div class="card">
+        <h3><i class="fa-solid fa-door-open"></i> Start your comment</h3>
+
+        <div class="starter easy">
+          <div class="label">Easy</div>
+          I read the article about sneakerheads and I think it is …
+        </div>
+
+        <div class="starter easy">
+          <div class="label">Easy</div>
+          In my opinion, the article is …
+        </div>
+
+        <div class="starter middle">
+          <div class="label">More detailed</div>
+          The article is about …
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><i class="fa-solid fa-star"></i> What is interesting</h3>
+
+        <div class="starter easy">
+          <div class="label">Easy</div>
+          I found it interesting that …
+        </div>
+
+        <div class="starter easy">
+          <div class="label">Easy</div>
+          I was surprised that …
+        </div>
+
+        <div class="starter middle">
+          <div class="label">More detailed</div>
+          One interesting point is that …
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><i class="fa-solid fa-check"></i> Agree</h3>
+
+        <div class="starter easy">
+          <div class="label">Easy</div>
+          I agree because …
+        </div>
+
+        <div class="starter middle">
+          <div class="label">More detailed</div>
+          I agree with the idea that …
+        </div>
+
+        <div class="starter middle">
+          <div class="label">More detailed</div>
+          I can understand why …
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><i class="fa-solid fa-xmark"></i> Disagree</h3>
+
+        <div class="starter easy">
+          <div class="label">Easy</div>
+          I don’t agree because …
+        </div>
+
+        <div class="starter middle">
+          <div class="label">More detailed</div>
+          I disagree with … because …
+        </div>
+
+        <div class="starter middle">
+          <div class="label">More detailed</div>
+          However, I think that …
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><i class="fa-solid fa-book-open"></i> Refer to the text</h3>
+
+        <div class="starter easy">
+          <div class="label">Easy</div>
+          The article says that …
+        </div>
+
+        <div class="starter easy">
+          <div class="label">Easy</div>
+          Kenneth says that …
+        </div>
+
+        <div class="starter middle">
+          <div class="label">More detailed</div>
+          The author explains that …
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><i class="fa-solid fa-circle-question"></i> Ask a question</h3>
+
+        <div class="starter easy">
+          <div class="label">Easy</div>
+          Why do people …?
+        </div>
+
+        <div class="starter easy">
+          <div class="label">Easy</div>
+          I don’t understand why …
+        </div>
+
+        <div class="starter middle">
+          <div class="label">More detailed</div>
+          One question I have is …
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><i class="fa-solid fa-link"></i> Give reasons</h3>
+
+        <div class="starter easy">
+          <div class="label">Easy</div>
+          This is important because …
+        </div>
+
+        <div class="starter easy">
+          <div class="label">Easy</div>
+          For example, …
+        </div>
+
+        <div class="starter middle">
+          <div class="label">More detailed</div>
+          In addition, …
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><i class="fa-solid fa-flag-checkered"></i> Ending</h3>
+
+        <div class="starter easy">
+          <div class="label">Easy</div>
+          So, I think …
+        </div>
+
+        <div class="starter middle">
+          <div class="label">More detailed</div>
+          In conclusion, I think …
+        </div>
+
+        <div class="starter middle">
+          <div class="label">More detailed</div>
+          Overall, I believe that …
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+</body>
+</html>
