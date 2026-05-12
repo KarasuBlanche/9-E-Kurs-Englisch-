@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compare two news sources</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f4f7f8;
+  color:#1f2933;
+  overflow:hidden;
+}
+
+.slide{
+  width:100vw;
+  height:100vh;
+  padding:46px 68px;
+  background:
+    linear-gradient(135deg,#f3fbfb 0%, #ffffff 60%, #fff4ea 100%);
+}
+
+h1{
+  margin:0 0 26px 0;
+  font-size:50px;
+  color:#ff7a00;
+  font-weight:800;
+}
+
+.task-box{
+  background:white;
+  border-radius:24px;
+  padding:26px 34px;
+  margin-bottom:28px;
+  box-shadow:0 8px 22px rgba(0,0,0,0.08);
+  border-left:10px solid #ff7a00;
+}
+
+.task{
+  font-size:32px;
+  line-height:1.35;
+  font-weight:700;
+  margin:0;
+}
+
+.highlight{
+  color:#ff7a00;
+  font-weight:800;
+}
+
+.top{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  margin-bottom:30px;
+}
+
+.box{
+  background:white;
+  border-radius:22px;
+  padding:22px 28px;
+  box-shadow:0 8px 22px rgba(0,0,0,0.08);
+  border-top:8px solid #ff7a00;
+}
+
+.box-title{
+  font-size:27px;
+  font-weight:800;
+  margin-bottom:14px;
+}
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.tag{
+  background:#f7f7f7;
+  border:1px solid #e1e4e8;
+  border-radius:999px;
+  padding:10px 16px;
+  font-size:20px;
+  font-weight:600;
+}
+
+.table-box{
+  background:white;
+  border-radius:24px;
+  padding:28px;
+  box-shadow:0 8px 22px rgba(0,0,0,0.08);
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  table-layout:fixed;
+}
+
+th{
+  background:#ff7a00;
+  color:white;
+  padding:16px;
+  font-size:25px;
+  text-align:left;
+}
+
+td{
+  border:2px solid #dcdfe3;
+  height:82px;
+  padding:15px;
+  font-size:23px;
+  vertical-align:top;
+}
+
+td:first-child{
+  width:40%;
+  font-weight:700;
+  background:#fafafa;
+}
+
+@media print{
+  body{
+    overflow:visible;
+    background:white;
+  }
+
+  .slide{
+    width:100%;
+    height:auto;
+    min-height:100vh;
+  }
+
+  .box,
+  .task-box,
+  .table-box{
+    box-shadow:none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="slide">
+
+  <h1>Compare two news sources</h1>
+
+  <div class="task-box">
+    <p class="task">
+      Choose <span class="highlight">one event from the news</span>.  
+      Find it in <span class="highlight">two online sources</span>.  
+      Then compare the sources.
+    </p>
+  </div>
+
+  <div class="top">
+
+    <div class="box">
+      <div class="box-title">Event ideas</div>
+      <div class="tags">
+        <div class="tag">⚽ football match</div>
+        <div class="tag">✊ protest</div>
+        <div class="tag">🌍 war / conflict</div>
+        <div class="tag">🚑 accident</div>
+        <div class="tag">🌪️ weather disaster</div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box-title">Possible sources</div>
+      <div class="tags">
+        <div class="tag">news article</div>
+        <div class="tag">social media post</div>
+        <div class="tag">video, e.g. YouTube</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="table-box">
+
+    <table>
+      <tr>
+        <th>Question</th>
+        <th>Source 1</th>
+        <th>Source 2</th>
+      </tr>
+
+      <tr>
+        <td>What does the source say about the event?</td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Which details does the source focus on?</td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Does the source sound neutral or emotional?</td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>What is the biggest difference between both sources?</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+  </div>
+
+</section>
+
+</body>
+</html>
